@@ -18,28 +18,31 @@ body {
 }
 .logo {
   display: block;
-  margin: 10px 0px ;
+  margin: 20px 0px ;
 }
 .sup-menu ul, .intestazione ul {
   list-style: none;
   padding: 0px;
 }
-.sup-menu ul li{
-  margin-bottom: 10px;
-}
 .sup-menu ul img {
-  margin: 3px;
+  margin-right: 5px;
+  max-width: 30px;
+  color: #a3a3a3;
 }
 .sup-menu a{
   text-decoration: none;
-  color: lightgray;
+  color: #a3a3a3;
+
+}
+.sup-menu a:hover {
+  color: white;
 }
 .sup-menu h4 {
   color: white;
   text-transform: uppercase;
   font-weight: bold;
 }
-.sup-menu .prova-1 {
+.sup-menu .plus {
   display: inline-block;
   height: 30px;
   width: 30px;
@@ -52,22 +55,42 @@ body {
   margin-right: 5px;
 }
 .sup-menu_up {
-  height: 290px;
-}.sup-menu_down {
+  height: 270px;
+}
+.sup-menu_down {
   height: calc(100vh - 300px - 240px);
+}
+.sup-menu_down i {
+
 }
 .scroll {
   overflow: auto;
 }
 .install-signin {
-  height: 120px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-content: space-between;
 }
 .install-signin  img {
-  max-width: 40px;
+  width: 40px;
+  height: 40px;
+}
+.install {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #a3a3a3;
+}
+.signin {
+  padding: 5px 0px;
+}
+.profile {
+  display: inline-block;
+  background-color: #a3a3a3;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding-top: 2px;
 }
 .sup-main {
   background-color: purple;
