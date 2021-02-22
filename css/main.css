@@ -28,7 +28,6 @@ body {
 .sup-menu ul li{
   margin-bottom: 10px;
 }
-
 .sup-menu ul img {
   margin: 3px;
 }
@@ -53,6 +52,11 @@ body {
   font-size: 20px;
   margin-right: 5px;
 }
+.sup-menu_up {
+  height: 290px;
+}.sup-menu_down {
+  height: calc(100vh - 300px - 100px);
+}
 .scroll {
   overflow: auto;
 }
@@ -67,16 +71,10 @@ body {
 .row {
   margin: 0px;
 }
-.row::after {
-  clear: both;
-  display: table;
-  content: "";
-}
 .call-to-action {
   background-color: rgba(0, 0, 0, 0.1);
-}
-.call-to-action span {
-  float:right;
+  display: flex;
+  justify-content: flex-end;
 }
 .bottone {
   padding: 1rem 2rem;
@@ -101,7 +99,24 @@ body {
   color: white;
   text-transform: uppercase;
 }
-
+.main-page {
+  padding: 0px 10px;
+}
+.card {
+  display: inline-block;
+  max-height: 250px;
+  max-width: 200px;
+  margin-right: 10px;
+}
+.card div {
+  max-height: 200px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card div img {
+  max-width: 50%;
+}
 .player {
   display: flex;
   height: 100px;
