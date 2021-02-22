@@ -1,6 +1,9 @@
 body {
   background-color: yellow
 }
+.margin-bottom {
+  margin-bottom: 10px;
+}
 .sup {
   display: flex;
   background-color: red;
@@ -9,17 +12,99 @@ body {
 }
 .sup-menu {
   background-color: green;
-  width: 100px;
+  width: 200px;
   height: 100%;
+  padding: 0% 1%;
 
 }
+.logo {
+  display: block;
+  margin: 10px 0px ;
+}
+.sup-menu ul, .intestazione ul {
+  list-style: none;
+  padding: 0px;
+}
+.sup-menu ul li{
+  margin-bottom: 10px;
+}
+
+.sup-menu ul img {
+  margin: 3px;
+}
+.sup-menu a{
+  text-decoration: none;
+  color: lightgray;
+}
+.sup-menu h4 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.sup-menu .prova-1 {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-color: lightgray;
+  color: black;
+  text-align:center;
+  line-height: 30px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.scroll {
+  overflow: auto;
+}
+
 .sup-main {
   background-color: purple;
-  width: calc(100% - 100px);
+  width: calc(100% - 200px);
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+.row {
+  margin: 0px;
+}
+.row::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+.call-to-action {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.call-to-action span {
+  float:right;
+}
+.bottone {
+  padding: 1rem 2rem;
+  border: 2px solid white;
+  border-radius: 2rem;
+  margin: 20px;
+}
+.bottone a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.intestazione {
+  text-align: center;
+}
+.intestazione ul li {
+  display: inline-block;
+
+}
+.intestazione ul li a {
+  color: white;
+  text-transform: uppercase;
+}
+
 .player {
   display: flex;
   height: 100px;
   background-color: orange;
+  position: relative;
 }
