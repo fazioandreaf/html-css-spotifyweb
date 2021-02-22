@@ -1,3 +1,25 @@
 body {
   background-color: yellow
 }
+.sup {
+  display: flex;
+  background-color: red;
+  height: calc(100vh - 100px);
+  width: 100%;
+}
+.sup-menu {
+  background-color: green;
+  width: 100px;
+  height: 100%;
+
+}
+.sup-main {
+  background-color: purple;
+  width: calc(100% - 100px);
+  height: 100%;
+}
+.player {
+  display: flex;
+  height: 100px;
+  background-color: orange;
+}
