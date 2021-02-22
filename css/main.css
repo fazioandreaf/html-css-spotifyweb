@@ -6,16 +6,15 @@ body {
 }
 .sup {
   display: flex;
-  background-color: red;
+  background-color: black;
   height: calc(100vh - 100px);
   width: 100%;
+  color: #6b6b6b;
 }
 .sup-menu {
-  background-color: green;
   width: 200px;
   height: 100%;
   padding: 0% 1%;
-
 }
 .logo {
   display: block;
@@ -55,12 +54,21 @@ body {
 .sup-menu_up {
   height: 290px;
 }.sup-menu_down {
-  height: calc(100vh - 300px - 100px);
+  height: calc(100vh - 300px - 240px);
 }
 .scroll {
   overflow: auto;
 }
-
+.install-signin {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: space-between;
+}
+.install-signin  img {
+  max-width: 40px;
+}
 .sup-main {
   background-color: purple;
   width: calc(100% - 200px);
@@ -89,6 +97,7 @@ body {
   font-weight: bolder;
 }
 .intestazione {
+  padding: 2rem 0;
   text-align: center;
 }
 .intestazione ul li {
@@ -102,24 +111,88 @@ body {
 .main-page {
   padding: 0px 10px;
 }
+.many-card {
+  display: flex;
+}
 .card {
   display: inline-block;
   max-height: 250px;
-  max-width: 200px;
+  flex-basis: 200px;
   margin-right: 10px;
 }
-.card div {
+.card-img {
   max-height: 200px;
   max-width: 100%;
+  position: relative;
+}
+.card-img>a {
   display: flex;
   flex-wrap: wrap;
 }
-.card div img {
+.layover {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0,0,0,0.8);
+  line-height: 200px;
+  font-size: 100px;
+  color: rgba(255,255,255,0.7);
+}
+.card-img>a:hover .layover {
+  display: block;
+}
+.card-img_4 {
   max-width: 50%;
 }
+.card-img_1 {
+  max-width: 100%;
+}
+.card-img {
+  background-color: black;
+}
 .player {
+  padding: 0 10px;
   display: flex;
   height: 100px;
   background-color: orange;
   position: relative;
+  justify-content: space-between;
+}
+.player div {
+  align-self: center;
+  color: white
+}
+.track, .option {
+
+  flex-basis: 20%;
+}
+.track {
+  display: flex;
+  justify-content:space-between;
+
+}
+.track_info {
+  display: flex;
+}
+.track_info * {
+  align-self: center;
+}
+.track_info img {
+  height: 80px;
+  width: 100%;
+  margin-right: 5px;
+}
+
+.mediastation {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+.option {
+  display: flex;
+  justify-content: flex-end;
 }
