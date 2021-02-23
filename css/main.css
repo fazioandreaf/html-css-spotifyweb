@@ -15,6 +15,9 @@ body {
   color: #a3a3a3;
 }
 .sup-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 200px;
   height: 100%;
   padding: 0% 10px;
@@ -23,7 +26,7 @@ body {
   display: block;
   margin: 20px 0px ;
 }
-.sup-menu ul, .intestazione ul {
+.sup-menu ul, .intestazione ul li a{
   list-style: none;
   padding: 0px;
 }
@@ -38,6 +41,13 @@ body {
 }
 .sup-menu a:hover, .track-share a:hover {
   color: white;
+}
+.menu-li {
+  padding-left: 2px;
+}
+li .menu-li:focus {
+  border-left: 2px solid #adff2f;
+  padding: 1.2rem 0;
 }
 .sup-menu h4 {
   color: white;
@@ -136,13 +146,16 @@ body {
   width: max-content;
   transition: all 0.1s ease-in-out;
 }
- .prova-11:hover {
+.prova-11:hover {
   transform: scale(1.2);
 }
 .intestazione {
+  display: flex;
+  justify-content: center;
   margin-top: 80px;
   padding: 2rem 0;
   text-align: center;
+  font-size:2.5rem;
 }
 .intestazione ul li {
   display: inline-block;
@@ -157,8 +170,11 @@ body {
 }
 .a-intestazione {
   position: relative;
-
 }
+.a-intestazione:hover,.a-intestazione:focus {
+  text-decoration: none;
+}
+
 .intestazione_hover {
   display:none;
   position: absolute;
@@ -176,7 +192,6 @@ body {
 }
 .a-intestazione:focus .intestazione_hover  {
   display: block;
-
 }
 .main-page {
   padding: 15px;
@@ -190,12 +205,49 @@ body {
 }
 .many-card {
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .card {
   display: inline-block;
-  width: 20%;
+  width: 15%;
   margin-right: 10px;
 }
+@media screen and (min-width:993px) and (max-width:1200px)  {
+  .card {
+    width: 20%;
+  }
+}
+@media screen and (min-width:768px) and (max-width:992px)  {
+  .card {
+    width: 48%;
+  }
+}
+@media screen and (max-width:768px)  {
+  .card {
+    width: 45%;
+  }
+  .sup-menu {
+    width: 50px;
+    padding:0 1px;
+    text-align: center;
+  }
+  .sup-menu ul img {
+    margin: 0 auto;
+  }
+  .call-to-action {
+    width: calc(100vw - 50px);
+  }
+
+  .sup-main {
+    width: calc(100% - 30px);
+  }
+  .install {
+    border: 0px;
+  }
+}
+
 .card-img {
   max-width: 100%;
   position: relative;
@@ -206,19 +258,22 @@ body {
 }
 .layover {
   display: none;
-  position: absolute;
   height: 100%;
   width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
   background-color: rgba(0,0,0,0.8);
-  line-height: 200px;
-  font-size: 100px;
+  font-size: 7rem;
   color: rgba(255,255,255,0.7);
 }
+.layover i {
+  align-self: center;
+}
 .card-img>a:hover .layover {
-  display: block;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+}
+.rounded {
+  border-radius: 50%;
 }
 .card-img_4 {
   width: 50%;
@@ -226,24 +281,24 @@ body {
 .card-img_1 {
   width: 100%;
 }
-.recently-played img {
-  border-radius: 50%;
-}
+
 /* parte sotto */
 .player {
-  padding: 0 10px;
   display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
   height: 100px;
+  width: 100vw;
   background-color: #282828;
   position: relative;
-  justify-content: space-between;
+  z-index: 100;
 }
 .player div {
   align-self: center;
   color: white
 }
-.track, .option {
-  flex-basis: 25%;
+.track,.option {
+  flex-basis: 20%;
 }
 .track {
   display: flex;
@@ -259,8 +314,8 @@ body {
   align-self: center;
 }
 .track_info img {
-  height: 80px;
-  width: 80px;
+  height: 40px;
+  width: 40px;
   margin-right: 5px;
 }
 .track-share {
@@ -268,6 +323,7 @@ body {
   flex-wrap: wrap;
   justify-content:space-between;
   flex-basis: 13%;
+  margin-right: 10px;
 }
 .title a h5 {
   color: #6e6e6e;
@@ -328,11 +384,15 @@ body {
 .option {
   display: flex;
   justify-content: flex-end;
-  align-self: stretch;
 }
 .option>* {
   align-self: center;
 }
+.option>a {
+  flex-basis: 5%;
+}
+
 .option #line-progresbar {
   flex-basis: 70%;
+  justify-content: flex-end;
 }
