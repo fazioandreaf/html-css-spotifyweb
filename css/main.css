@@ -31,12 +31,11 @@ body {
   max-width: 30px;
   color: #a3a3a3;
 }
-.sup-menu a{
+.sup-menu a, .track-share a {
   text-decoration: none;
   color: #a3a3a3;
-
 }
-.sup-menu a:hover {
+.sup-menu a:hover, .track-share a:hover {
   color: white;
 }
 .sup-menu h4 {
@@ -48,13 +47,14 @@ body {
   display: inline-block;
   height: 30px;
   width: 30px;
-  background-color: lightgray;
+  background-color: #a3a3a3;
   color: black;
   text-align:center;
   line-height: 30px;
-  font-weight: 600;
-  font-size: 20px;
   margin-right: 5px;
+}
+.sup-menu a:hover .plus {
+  background-color:  white;
 }
 .sup-menu_up {
   height: 270px;
@@ -165,11 +165,11 @@ body {
   top:100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: green;
+  background-color: #adff2f;
   width: 40px;
   height: 10px;
 }
-.a-intestazione:hover, .a-intestazione:focus {
+.a-intestazione:hover, .a-intestazione:focus,  {
   text-decoration: none;
   color: white;
 }
@@ -232,7 +232,7 @@ body {
   padding: 0 10px;
   display: flex;
   height: 100px;
-  background-color: orange;
+  background-color: #282828;
   position: relative;
   justify-content: space-between;
 }
@@ -241,13 +241,14 @@ body {
   color: white
 }
 .track, .option {
-
-  flex-basis: 20%;
+  flex-basis: 25%;
 }
 .track {
   display: flex;
   justify-content:space-between;
-
+}
+.track h4 {
+  font-weight: bolder;
 }
 .track_info {
   display: flex;
@@ -257,16 +258,65 @@ body {
 }
 .track_info img {
   height: 80px;
-  width: 100%;
+  width: 80px;
   margin-right: 5px;
 }
-
-.mediastation {
+.track-share {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  flex-basis: 13%;
+}
+.title a h5 {
+  color: #6e6e6e;
+}
+.title a:hover h5, .title a:hover {
+  color: white;
+}
+.player .mediastation {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
-  flex-basis: 50%;
+  justify-content: center;
+  flex-basis: 40%;
+}
+.mediastation-control a, .option a {
+  color:white;
+  margin-right: 5px;
+}
+.mediastation-control a:nth-child(3):hover i {
+  transform: scale(1.2);
+}
+#line-progresbar {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+}
+.progresbar {
+  height: 25%;
+  flex-basis: 70%;
+  background-color: #5a5a5a;
+  border-radius: 2%;
+  align-self: center;
+}
+.progresbar-complete {
+  width: 40%;
+  background-color: #c1c1c1;
+  height: 100%;
+  border-radius: 2px;
+}
+.progresbar:hover .progresbar-complete {
+  background-color: #adff2f;
+
 }
 .option {
   display: flex;
   justify-content: flex-end;
+  align-self: stretch;
+}
+.option>* {
+  align-self: center;
+}
+.option #line-progresbar {
+  flex-basis: 70%;
 }
