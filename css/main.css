@@ -61,7 +61,7 @@ body {
   height: 270px;
 }
 .sup-menu_down {
-  height: calc(100vh - 300px - 240px);
+  max-height: calc(100vh - 300px - 200px);
 }
 .sup-menu_down i {
 
@@ -70,7 +70,7 @@ body {
   overflow: auto;
 }
 .install-signin {
-  height: 150px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -105,7 +105,7 @@ body {
 .call-to-action {
   background-color: rgba(8, 11, 18,0.9);
   height: 80px;
-  width: 100%;
+  width: calc(100vw - 200px);
   position:fixed;
   z-index: 10;
   top: 0;
@@ -129,15 +129,14 @@ body {
   color: white;
   text-decoration: none;
 }
-.p-r>.prova-11{
-  position: absolute;
-  left:80%;
-  top:50%;
-  transform: translate(-50% , -50%) ;
-  width: 200px;
+.prova-11{
+  float: right;
+  margin-right: 50px;
+  line-height: 80px;
+  width: max-content;
   transition: all 0.1s ease-in-out;
 }
-.p-r .bottone:hover .prova-11 {
+ .prova-11:hover {
   transform: scale(1.2);
 }
 .intestazione {
