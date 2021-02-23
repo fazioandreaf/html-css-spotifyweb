@@ -1,7 +1,8 @@
-@import url(//db.onlinewebfonts.com/c/112ec584bfc481ccde03444e67f8fc3f?family=Circular+Spotify+Tx+T+Bold);
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
 body {
   background-color: yellow;
-  font-family: "Circular Spotify Tx T Bold";}
+ font-family: 'Signika', sans-serif;
+}
 .margin-bottom {
   margin-bottom: 10px;
 }
@@ -15,7 +16,7 @@ body {
 .sup-menu {
   width: 200px;
   height: 100%;
-  padding: 0% 1%;
+  padding: 0% 10px;
 }
 .logo {
   display: block;
@@ -179,17 +180,22 @@ body {
 .main-page {
   padding: 15px;
 }
+.main-page_row {
+  display: flex;
+  flex-direction: column;
+}
+.main-page_row h2, .card h3{
+  color: white;
+}
 .many-card {
   display: flex;
 }
 .card {
   display: inline-block;
-  max-height: 250px;
-  flex-basis: 200px;
+  width: 20%;
   margin-right: 10px;
 }
 .card-img {
-  max-height: 200px;
   max-width: 100%;
   position: relative;
 }
@@ -214,13 +220,13 @@ body {
   display: block;
 }
 .card-img_4 {
-  max-width: 50%;
+  width: 50%;
 }
 .card-img_1 {
-  max-width: 100%;
+  width: 100%;
 }
-.card-img {
-  background-color: black;
+.recently-played img {
+  border-radius: 50%;
 }
 .player {
   padding: 0 10px;
