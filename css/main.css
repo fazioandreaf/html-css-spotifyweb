@@ -3,6 +3,7 @@ body {
   background-color: yellow;
  font-family: 'Signika', sans-serif;
 }
+/* menu di sinistra */
 .margin-bottom {
   margin-bottom: 10px;
 }
@@ -90,6 +91,7 @@ body {
   border-radius: 50%;
   padding: 1px;
 }
+/* parte centrale pagina */
 .sup-main {
   background-color: #141922;
   width: calc(100% - 200px);
@@ -121,22 +123,22 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bolder;
+  text-align: center;
 }
-.p-r>.bottone {
+.bottone:hover {
+  color: white;
+  text-decoration: none;
+}
+.p-r>.prova-11{
   position: absolute;
   left:80%;
   top:50%;
   transform: translate(-50% , -50%) ;
   width: 200px;
-  text-align: center;
   transition: all 0.1s ease-in-out;
 }
-.p-r>.bottone:hover {
-  color: white;
-  text-decoration: none;
-  transform: scale(1.1);
-  left: 68%;
-  top: 23%;
+.p-r .bottone:hover .prova-11 {
+  transform: scale(1.2);
 }
 .intestazione {
   margin-top: 80px;
@@ -228,6 +230,7 @@ body {
 .recently-played img {
   border-radius: 50%;
 }
+/* parte sotto */
 .player {
   padding: 0 10px;
   display: flex;
