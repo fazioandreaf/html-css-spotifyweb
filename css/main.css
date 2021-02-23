@@ -278,7 +278,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-basis: 40%;
+  flex-basis: 45%;
 }
 .mediastation-control a, .option a {
   color:white;
@@ -299,15 +299,29 @@ body {
   border-radius: 2%;
   align-self: center;
 }
+.round {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: lightgray;
+  display: none;
+}
 .progresbar-complete {
   width: 40%;
-  background-color: #c1c1c1;
+  background-color: white;
   height: 100%;
   border-radius: 2px;
+  position: relative;
 }
 .progresbar:hover .progresbar-complete {
   background-color: #adff2f;
-
+}
+.progresbar:hover .round {
+  display: block;
 }
 .option {
   display: flex;
