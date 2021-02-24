@@ -47,7 +47,7 @@ h6 {
 .menu-li {
   padding-left: 2px;
 }
-li .menu-li:focus {
+li .menu-li:focus, li .menu-li:hover {
   border-left: 2px solid #adff2f;
   padding: 1.2rem 0;
 }
@@ -195,7 +195,7 @@ li .menu-li:focus {
   display: block;
 }
 .main-page {
-  padding: 0 15px;
+  padding: 0 1%;
 }
 .main-page_row {
   display: flex;
@@ -217,7 +217,7 @@ li .menu-li:focus {
 .card {
   display: inline-block;
   width: 15%;
-  margin-right: 10px;
+  margin-right: 1%;
 }
 @media screen and (min-width:993px) and (max-width:1200px)  {
   .card {
@@ -226,16 +226,16 @@ li .menu-li:focus {
 }
 @media screen and (min-width:768px) and (max-width:992px)  {
   .card {
-    width: 48%;
+    width: 49%;
   }
 }
 @media screen and (max-width:768px)  {
   .card {
-    width: 45%;
+    width: 49%;
   }
   .sup-menu {
     width: 50px;
-    padding:0 1px;
+    padding:0 1%;
     text-align: center;
   }
   .sup-menu ul img {
@@ -305,7 +305,7 @@ li .menu-li:focus {
   color: white
 }
 .track,.option {
-  flex-basis: 20%;
+  flex-basis: 35%;
 }
 .track {
   display: flex;
@@ -316,7 +316,7 @@ li .menu-li:focus {
 }
 .track_info {
   display: flex;
-  flex-grow: 2;
+  flex-grow: 1;
 }
 .track_info img {
   height: 40px;
@@ -326,8 +326,8 @@ li .menu-li:focus {
 .track-share {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
-  justify-content: flex-end;
+  flex-grow: 2;
+  justify-content: flex-start;
 }
 .track-share a:first-child{
   margin-right: 2px;
@@ -347,23 +347,42 @@ li .menu-li:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-basis: 45%;
+  flex-basis: 30%;
+}
+.mediastation>.mediastation-control {
+  align-self: stretch;
+  text-align: center;
 }
 .mediastation-control a, .option a {
   color:white;
-  margin-right: 5px;
+  margin-right: 15px;
+  font-size: 20px;
+}
+.mediastation-control a:last-child, .option>a:last-child {
+  margin-right: 0px;
 }
 .mediastation-control a:nth-child(3):hover i {
   transform: scale(1.2);
+}
+.icon-list {
+  flex-grow: 1;
+  text-align: right;
 }
 #line-progresbar {
   align-self: stretch;
   display: flex;
   justify-content: space-between;
 }
+#line-progresbar>a:first-child{
+  margin-right: 1px;
+}
+.option .progresbar {
+  margin-right: 0;
+  flex-basis: 100% ;
+}
 .progresbar {
   height: 25%;
-  flex-basis: 70%;
+  flex-basis: 80%;
   background-color: #5a5a5a;
   border-radius: 2%;
   align-self: center;
@@ -404,6 +423,6 @@ li .menu-li:focus {
 }
 
 .option #line-progresbar {
-  flex-basis: 70%;
+  flex-basis: 40%;
   justify-content: flex-end;
 }
