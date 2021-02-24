@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 body {
-  background-color: yellow;
- font-family: 'Signika', sans-serif;
+ font-family: 'Montserrat', sans-serif;
 }
 /* menu di sinistra */
 .margin-bottom {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+h6 {
+  font-size: 11px;
 }
 .sup {
   display: flex;
@@ -20,7 +22,7 @@ body {
   justify-content: space-between;
   width: 200px;
   height: 100%;
-  padding: 0% 10px;
+  padding: 0% 20px;
 }
 .logo {
   display: block;
@@ -56,22 +58,24 @@ li .menu-li:focus {
 }
 .sup-menu .plus {
   display: inline-block;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   background-color: #a3a3a3;
   color: black;
-  text-align:center;
-  line-height: 30px;
+  line-height: 40px;
   margin-right: 5px;
+  font-size: 25px;
 }
-.sup-menu a:hover .plus {
+.playlist:hover .plus {
   background-color:  white;
 }
-.sup-menu_up {
-  height: 270px;
+.playlist:hover {
+  color: white;
+
 }
 .sup-menu_down {
-  max-height: calc(100vh - 300px - 200px);
+  flex-basis: 200px;
+  flex-grow: 1;
 }
 .sup-menu_down i {
 
@@ -80,21 +84,20 @@ li .menu-li:focus {
   overflow: auto;
 }
 .install-signin {
-  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 .install-signin  img {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
 }
 .install {
   padding-bottom: 10px;
   border-bottom: 1px solid #a3a3a3;
 }
 .signin {
-  padding: 5px 0px;
+  padding: 10px 0px;
 }
 .profile {
   background-color: #a3a3a3;
@@ -109,12 +112,9 @@ li .menu-li:focus {
   display: flex;
   flex-direction: column;
 }
-.row {
-  margin: 0px;
-}
 .call-to-action {
   background-color: rgba(8, 11, 18,0.9);
-  height: 80px;
+  height: 100px;
   width: calc(100vw - 200px);
   position:fixed;
   z-index: 10;
@@ -139,27 +139,29 @@ li .menu-li:focus {
   color: white;
   text-decoration: none;
 }
-.prova-11{
+.c-t-a-b{
   float: right;
-  margin-right: 50px;
-  line-height: 80px;
+  margin-right: 5px;
+  line-height: 100px;
   width: max-content;
   transition: all 0.1s ease-in-out;
 }
-.prova-11:hover {
+.c-t-a-b:hover {
   transform: scale(1.2);
 }
 .intestazione {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
-  padding: 2rem 0;
-  text-align: center;
-  font-size:2.5rem;
+  margin-top: 120px;
 }
 .intestazione ul li {
   display: inline-block;
   margin-right: 5px;
+}
+.intestazione ul {
+  padding:0px;
+  margin:0;
+
 }
 .intestazione ul li:last-child {
   margin-right: 0;
@@ -174,7 +176,6 @@ li .menu-li:focus {
 .a-intestazione:hover,.a-intestazione:focus {
   text-decoration: none;
 }
-
 .intestazione_hover {
   display:none;
   position: absolute;
@@ -184,17 +185,17 @@ li .menu-li:focus {
   transform: translateX(-50%);
   background-color: #adff2f;
   width: 40px;
-  height: 10px;
+  height: 2px;
 }
 .a-intestazione:hover, .a-intestazione:focus,  {
   text-decoration: none;
   color: white;
 }
-.a-intestazione:focus .intestazione_hover  {
+.a-intestazione:focus .intestazione_hover,.a-intestazione:hover .intestazione_hover  {
   display: block;
 }
 .main-page {
-  padding: 15px;
+  padding: 0 15px;
 }
 .main-page_row {
   display: flex;
@@ -202,6 +203,10 @@ li .menu-li:focus {
 }
 .main-page_row h2, .card h3{
   color: white;
+  font-weight: bold;
+}
+.card h3 {
+  font-size: 1.2rem;
 }
 .many-card {
   display: flex;
@@ -261,8 +266,8 @@ li .menu-li:focus {
   height: 100%;
   width: 100%;
   background-color: rgba(0,0,0,0.8);
-  font-size: 7rem;
-  color: rgba(255,255,255,0.7);
+  font-size: 5rem;
+  color: white;
 }
 .layover i {
   align-self: center;
@@ -281,7 +286,9 @@ li .menu-li:focus {
 .card-img_1 {
   width: 100%;
 }
-
+.main-page_row>h6 {
+  margin-top: 0px;
+}
 /* parte sotto */
 .player {
   display: flex;
@@ -309,9 +316,7 @@ li .menu-li:focus {
 }
 .track_info {
   display: flex;
-}
-.track_info * {
-  align-self: center;
+  flex-grow: 2;
 }
 .track_info img {
   height: 40px;
@@ -321,11 +326,17 @@ li .menu-li:focus {
 .track-share {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-between;
-  flex-basis: 13%;
-  margin-right: 10px;
+  flex-grow: 1;
+  justify-content: flex-end;
 }
-.title a h5 {
+.track-share a:first-child{
+  margin-right: 2px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+}
+.title a span {
   color: #6e6e6e;
 }
 .title a:hover h5, .title a:hover {
