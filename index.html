@@ -323,7 +323,7 @@
         <div class="line-progresbar">
           <span>{{volume_text}}</span>
           <div>
-              <input type="range" id="prova" v-model.sync="volume" name="vol" min="0" max="200">
+              <input type="range" id="bar" v-model.sync="volume" name="vol" min="0" max="200">
           </div>
           <span>{{timefinish_text}}</span>
         </div>
@@ -334,20 +334,13 @@
           <a href="#"><i class="fas fa-desktop"></i></a>
 
         </div>
-        <div class="line-progresbar">
-          <a @click="booleanMute" href="#">
-            <i v-if="buttonMute" class="fas fa-volume-up"></i>
-            <i v-else class="fas fa-volume-mute"></i>
-          </a>
-          <a href="#" class="progresbar">
-            <div class="progresbar-complete">
-              <div class="round">
-
-              </div>
-
-            </div>
-          </a>
-        </div>
+        <a @click="booleanMute" href="#">
+          <i v-if="buttonMute" class="fas fa-volume-up"></i>
+          <i v-else class="fas fa-volume-mute"></i>
+        </a>
+          <div>
+              <input type="range" id="bar" v-model.sync="volumee" name="vol" min="0" max="200">
+          </div>
       </div>
 
     </div>

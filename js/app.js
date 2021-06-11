@@ -11,6 +11,7 @@ function init(){
           repeat:false,
           random:false,
           volume:0,
+          volumee:0,
           volume_text:'Inizio',
           counter:1,
           timefinish:200,
