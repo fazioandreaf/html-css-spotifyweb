@@ -279,7 +279,7 @@
                 <h6></h6>
 
               </div>
-
+              <input type="range" id="vol" v-model="volume"name="vol" min="0" max="100">
             </div>
           </div>
 
@@ -299,7 +299,10 @@
           </div>
         </div>
           <div class="track-share">
-            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#" @click="booleanLikeIt">
+              <i v-if="buttonLikeIt" class="fas fa-heart"></i>
+              <i v-else  class="far fa-heart"></i>
+            </a>
             <a href="#"><i class="far fa-folder"></i></a>
           </div>
       </div>
@@ -314,7 +317,7 @@
           <a href="#"><i class="fas fa-step-forward"></i></a>
           <a href="#"><i class="fas fa-undo"></i></a>
         </div>
-        <div id="line-progresbar">
+        <div class="line-progresbar">
           <span>0:25</span>
           <a href="#" class="progresbar">
             <div class="progresbar-complete">
@@ -332,8 +335,11 @@
           <a href="#"><i class="fas fa-desktop"></i></a>
 
         </div>
-        <div id="line-progresbar">
-          <a href="#"><i class="fas fa-volume-up"></i></a>
+        <div class="line-progresbar">
+          <a @click="booleanMute" href="#">
+            <i v-if="buttonMute" class="fas fa-volume-up"></i>
+            <i v-else class="fas fa-volume-mute"></i>
+          </a>
           <a href="#" class="progresbar">
             <div class="progresbar-complete">
               <div class="round">

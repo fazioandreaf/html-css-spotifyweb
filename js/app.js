@@ -7,7 +7,8 @@ function init(){
           timeFinish:0,  
           buttonPlay:false,
           buttonLikeIt:false,
-          buttonMute:false,
+          buttonMute:true,
+          volume:0,
         },
         'methods':{
             booleanPlay:function(){

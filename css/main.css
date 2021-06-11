@@ -408,25 +408,29 @@ opacity: 1;
 }
 .mediastation>div{
   flex: 1;
+  width: 100%;
 }
 .icon-list {
-  flex-grow: 1;
-  text-align: right;
+  flex-grow: 0.3;
+  display: flex;
+  justify-content: space-evenly;
 }
-#line-progresbar {
+.icon-list{
+
+}
+.line-progresbar {
   align-self: stretch;
   display: flex;
   justify-content: space-between;
 }
-#line-progresbar>*{
+.line-progresbar>*{
   align-self: center;
 }
-#line-progresbar>a:first-child{
+.line-progresbar>a:first-child{
   margin-right: 1px;
 }
 .option .progresbar {
   margin-right: 0;
-  flex-basis: 100% ;
 }
 .progresbar {
   height: 25%;
@@ -472,9 +476,9 @@ opacity: 1;
   flex-basis: 5%;
 }
 
-.option #line-progresbar {
+.option .line-progresbar {
   flex-basis: 40%;
-  justify-content: flex-end;
+  display: flex;
 }
 .mediastation-control .onclicl:active {
   font-size: 2rem;
