@@ -478,7 +478,7 @@ opacity: 1;
   align-self: center;
 }
 .option>a {
-  flex-basis: 5%;
+  flex-basis: 10%;
 }
 
 .option .line-progresbar {
@@ -520,12 +520,10 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]::-moz-range-progress {
   background-color: white;
   height: 100%;
-  border-radius:30px;
   border:none;
 }
 input[type="range"]::-moz-range-track {  
   background-color: grey;
-  border-radius:30px;
   border:none;
   height: 100%;
 }
@@ -534,11 +532,14 @@ input[type="range"]::-moz-range-track {
 }
 .option input[type="range"]::-moz-range-track {  
   background-color: grey;
-  border-radius:30px;
   border:none;
   height: 100%;
 }
  .option:hover input[type="range"]::-moz-range-thumb {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+}
+.option .range{
+    font-size: 0.5rem;
+    flex-basis: 40%;
 }

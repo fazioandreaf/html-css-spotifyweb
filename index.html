@@ -329,18 +329,15 @@
         </div>
       </div>
       <div class="option">
-        <div class="icon-list">
-          <a href="#"><i class="fas fa-list"></i></a>
-          <a href="#"><i class="fas fa-desktop"></i></a>
-
-        </div>
+        <a href="#"><i class="fas fa-list"></i></a>
+        <a href="#"><i class="fas fa-desktop"></i></a>
         <a @click="booleanMute" href="#">
           <i v-if="buttonMute" class="fas fa-volume-up"></i>
           <i v-else class="fas fa-volume-mute"></i>
         </a>
-          <div>
-              <input type="range" id="bar" v-model.sync="volumee" name="vol" min="0" max="200">
-          </div>
+        <div class="range">
+            <input type="range" id="bar" v-model.sync="volumee" name="vol" min="0" max="200">
+        </div>
       </div>
 
     </div>
