@@ -9,333 +9,345 @@
     <link src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="/js/app.js">
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- cdn axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+ <script src="js/app.js"></script>
+
   </head>
   <body>
+    <div id="app">
+
     <!-- parte grande sopra -->
-   <div class="sup" >
-     <div class="sup-menu">
-       <div class="sup-menu_up margin-bottom">
-         <img class="logo hidden-xs" src="img/logo.svg" alt="">
-         <img class="logo visible-xs-block" src="img/logo-small.svg" alt="">
-         <ul class="margin-bottom">
-           <li class="margin-bottom"><a class="menu-li"href="#"><img src="img/home.svg" alt=""><span class="hidden-xs">Home</span></a></li>
-           <li class="margin-bottom"><a class="menu-li"href="#"><img src="img/search.svg" alt=""><span class="hidden-xs">Search</span></a></li>
-           <li class="margin-bottom"><a class="menu-li"href="#"><img src="img/libreria.svg" alt=""><span class="hidden-xs">Your library</span></a></li>
-         </ul>
-          <div class="margin-bottom playlist">
-            <h4 class=" hidden-xs">playlist</h4>
-            <a  class="" href="#">
-              <span class="hidden-xs"><span class="plus text-center"><i class="fas fa-plus"></i></span>New playlist</span>
-            </a>
-
-          </div>
-       </div>
-       <div class="sup-menu_down scroll hidden-xs">
-         <ul class="margin-bottom">
-           <li class="margin-bottom"><a href="#">Linkin Park</a></li>
-           <li class="margin-bottom"><a href="#">Guns N' Roses</a></li>
-           <li class="margin-bottom"><a href="#">Twenty One Pilots</a></li>
-           <li class="margin-bottom"><a href="#">Muse</a></li>
-           <li class="margin-bottom"><a href="#">Tha Supreme</a></li>
-           <li class="margin-bottom"><a href="#">Madame</a></li>
-           <li class="margin-bottom"><a href="#">Caparezza</a></li>
-           <li class="margin-bottom"><a href="#">Tedua</a></li>
-           <li class="margin-bottom"><a href="#">Coez</a></li>
-           <li class="margin-bottom"><a href="#">Subsonica</a></li>
-         </ul>
-       </div>
-       <div class="install-signin">
-         <div class="install">
-           <a href="#">
-             <i class="far fa-arrow-alt-circle-down"></i>
-              <span class="hidden-xs">Install app</span></a>
-         </div>
-         <div class="signin">
-           <img class="profile" src="img/1.png" alt="">
-            <a href="#"><span class="hidden-xs">Andrea Fazio</span></a>
-
-         </div>
-       </div>
-     </div>
-     <div class="sup-main scroll">
-      <div class="call-to-action margin-bottom">
-          <div class="c-t-a-b">
-
-            <a class="bottone  " href="#">
-           upgrade your account
-            </a>
-          </div>
-
-      </div>
-      <div class="intestazione margin-bottom text-center">
-          <ul>
-            <li>
-              <div >
-                <a href="#" class="a-intestazione">
-                  Featured
-                  <div class="intestazione_hover"></div>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div >
-                <a href="#" class="a-intestazione">
-                  podcast
-                  <div class="intestazione_hover"></div>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div >
-                <a href="#" class="a-intestazione">
-                  Top Chart
-                  <div class="intestazione_hover"></div>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div >
-                <a href="#" class="a-intestazione">
-                  generi and mood
-                  <div class="intestazione_hover"></div>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div >
-                <a href="#" class="a-intestazione">
-                  New Releases
-                  <div class="intestazione_hover"></div>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div >
-                <a href="#" class="a-intestazione">
-                  Discovery
-                  <div class="intestazione_hover"></div>
-                </a>
-              </div>
-            </li>
-
+    <div class="sup" >
+      <div class="sup-menu">
+        <div class="sup-menu_up margin-bottom">
+          <img class="logo hidden-xs" src="img/logo.svg" alt="">
+          <img class="logo visible-xs-block" src="img/logo-small.svg" alt="">
+          <ul class="margin-bottom">
+            <li class="margin-bottom"><a class="menu-li"href="#"><img src="img/home.svg" alt=""><span class="hidden-xs">Home</span></a></li>
+            <li class="margin-bottom"><a class="menu-li"href="#"><img src="img/search.svg" alt=""><span class="hidden-xs">Search</span></a></li>
+            <li class="margin-bottom"><a class="menu-li"href="#"><img src="img/libreria.svg" alt=""><span class="hidden-xs">Your library</span></a></li>
           </ul>
+            <div class="margin-bottom playlist">
+              <h4 class=" hidden-xs">playlist</h4>
+              <a  class="" href="#">
+                <span class="hidden-xs"><span class="plus text-center"><i class="fas fa-plus"></i></span>New playlist</span>
+              </a>
+
+            </div>
+        </div>
+        <div class="sup-menu_down scroll hidden-xs">
+          <ul class="margin-bottom">
+            <li class="margin-bottom"><a href="#">Linkin Park</a></li>
+            <li class="margin-bottom"><a href="#">Guns N' Roses</a></li>
+            <li class="margin-bottom"><a href="#">Twenty One Pilots</a></li>
+            <li class="margin-bottom"><a href="#">Muse</a></li>
+            <li class="margin-bottom"><a href="#">Tha Supreme</a></li>
+            <li class="margin-bottom"><a href="#">Madame</a></li>
+            <li class="margin-bottom"><a href="#">Caparezza</a></li>
+            <li class="margin-bottom"><a href="#">Tedua</a></li>
+            <li class="margin-bottom"><a href="#">Coez</a></li>
+            <li class="margin-bottom"><a href="#">Subsonica</a></li>
+          </ul>
+        </div>
+        <div class="install-signin">
+          <div class="install">
+            <a href="#">
+              <i class="far fa-arrow-alt-circle-down"></i>
+                <span class="hidden-xs">Install app</span></a>
+          </div>
+          <div class="signin">
+            <img class="profile" src="img/1.png" alt="">
+              <a href="#"><span class="hidden-xs">Andrea Fazio</span></a>
+
+          </div>
+        </div>
       </div>
-      <div class="main-page ">
-        <div class="main-page_row ">
-          <h2>Recently played</h2>
-          <div class="many-card margin-bottom">
-            <div class="card  text-center">
-              <div class="card-img">
-                <a href="#">
-                  <div class="layover">
-                    <i class="fas fa-play"></i>
-                  </div>
-                  <img src="img/nitro.png" class="card-img_4" alt="">
-                  <img src="img/linkinpark.jpg" class="card-img_4" alt="">
-                  <img src="img/21pilots.jpg" class="card-img_4" alt="">
-                  <img src="img/calcutta.jpg" class="card-img_4"  alt="">
-                </a>
-              </div>
-              <h3 class="text-capitalize">Prefer</h3>
-              <h6>Most listen</h6>
+      <div class="sup-main scroll">
+        <div class="call-to-action margin-bottom">
+            <div class="c-t-a-b">
 
-            </div>
-            <div class=" card text-center">
-              <div class="card-img">
-                <a href="#">
-                  <div class="layover">
-                    <i class="fas fa-play"></i>
-                  </div>
-                  <img src="img/linkinpark.jpg" class="card-img_1" alt="">
-                </a>
-              </div>
-              <h3 class="text-capitalize">Linkin park</h3>
-              <h6>Hybrid Theory</h6>
-
-            </div>
-            <div class=" card text-center">
-              <div class="card-img">
-                <a href="#">
-                  <div class="layover">
-                    <i class="fas fa-play"></i>
-                  </div>
-                  <img src="img/gun.jpg" class="card-img_1" alt="a quiet place">
-                </a>
-              </div>
-              <h3 class="text-capitalize">Guns N' Roses</h3>
-              <h6>appetite for destruction</h6>
-
-            </div>
-            <div class=" card text-center">
-              <div class="card-img">
-                <a href="#">
-                  <div class="layover">
-                    <i class="fas fa-play"></i>
-                  </div>
-                  <img src="img/drones.jpg" class="card-img_1" alt="">
-                </a>
-              </div>
-              <h3 class="text-capitalize">Muse</h3>
-              <h6>Drones</h6>
-
-            </div>
-            <div class=" card text-center">
-              <div class="card-img">
-                <a href="#">
-                  <div class="layover">
-                    <i class="fas fa-play"></i>
-                  </div>
-                  <img src="img/subsonica.jpg" class="card-img_1" alt="">
-                </a>
-              </div>
-              <h3 class="text-capitalize">Subsonica</h3>
-              <h6>Microchip Emozionale</h6>
-
-              </div>
-            <div class=" card text-center">
-              <div class="card-img">
-                <a href="#">
-                  <div class="layover">
-                    <i class="fas fa-play"></i>
-                  </div>
-                  <img src="img/coez.jpg" class="card-img_1" alt="">
-                </a>
-              </div>
-              <h3 class="text-capitalize">Coez</h3>
-              <h6>Non erano fiori</h6>
-
+              <a class="bottone  " href="#">
+            upgrade your account
+              </a>
             </div>
 
-          </div>
         </div>
-        <div class="main-page_row ">
-          <h2>Create for Andrea Fazio</h2>
-          <h6 class="margin-bottom">Most listened, new suggestion</h6>
-          <div class="many-card margin-bottom scroll">
-            <div class=" card text-center">
-              <div class="card-img">
-                <a href="#">
-                  <div class="layover">
-                    <i class="fas fa-play"></i>
-                  </div>
-                  <img src="img/radar.jpeg" class="card-img_1" alt="">
-                </a>
-              </div>
-              <h3 class="text-capitalize">Release Radar</h3>
-              <h6></h6>
+        <div class="intestazione margin-bottom text-center">
+            <ul>
+              <li>
+                <div >
+                  <a href="#" class="a-intestazione">
+                    Featured
+                    <div class="intestazione_hover"></div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div >
+                  <a href="#" class="a-intestazione">
+                    podcast
+                    <div class="intestazione_hover"></div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div >
+                  <a href="#" class="a-intestazione">
+                    Top Chart
+                    <div class="intestazione_hover"></div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div >
+                  <a href="#" class="a-intestazione">
+                    generi and mood
+                    <div class="intestazione_hover"></div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div >
+                  <a href="#" class="a-intestazione">
+                    New Releases
+                    <div class="intestazione_hover"></div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div >
+                  <a href="#" class="a-intestazione">
+                    Discovery
+                    <div class="intestazione_hover"></div>
+                  </a>
+                </div>
+              </li>
 
-              </div>
-            <div class=" card text-center">
-              <div class="card-img">
-                <a href="#">
-                  <div class="layover">
-                    <i class="fas fa-play"></i>
-                  </div>
-                  <img src="img/mixdaily.jpeg" class="card-img_1" alt="">
-                </a>
-              </div>
-              <h3 class="text-capitalize">Daily Mix 1</h3>
-              <h6></h6>
-
-            </div>
-
-          </div>
+            </ul>
         </div>
-        <div class="main-page_row recently-played">
-          <h2>New Artist</h2>
-          <h6 class="margin-bottom">We think that these artists interest you</h6>
-          <div class="many-card margin-bottom scroll">
-            <div class=" card text-center">
-              <div class="card-img rounded">
-                <a href="#" >
-                  <div class="layover rounded">
-                    <i class="fas fa-play"></i>
-                  </div>
-                  <img src="img/einaudi.jpeg" class="rounded card-img_1" alt="">
-                </a>
+        <div class="main-page ">
+          <div class="main-page_row ">
+            <h2>Recently played</h2>
+            <div class="many-card margin-bottom">
+              <div class="card  text-center">
+                <div class="card-img">
+                  <a href="#">
+                    <div class="layover">
+                      <i  class="fas fa-play"></i>
+                    </div>
+                    <img src="img/nitro.png" class="card-img_4" alt="">
+                    <img src="img/linkinpark.jpg" class="card-img_4" alt="">
+                    <img src="img/21pilots.jpg" class="card-img_4" alt="">
+                    <img src="img/calcutta.jpg" class="card-img_4"  alt="">
+                  </a>
+                </div>
+                <h3 class="text-capitalize">Prefer</h3>
+                <h6>Most listen</h6>
+
               </div>
-              <h3 class="text-capitalize">Einaudi</h3>
-              <h6 class="margin-bottom"></h6>
+              <div class=" card text-center">
+                <div class="card-img">
+                  <a href="#">
+                    <div class="layover">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <img src="img/linkinpark.jpg" class="card-img_1" alt="">
+                  </a>
+                </div>
+                <h3 class="text-capitalize">Linkin park</h3>
+                <h6>Hybrid Theory</h6>
+
+              </div>
+              <div class=" card text-center">
+                <div class="card-img">
+                  <a href="#">
+                    <div class="layover">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <img src="img/gun.jpg" class="card-img_1" alt="a quiet place">
+                  </a>
+                </div>
+                <h3 class="text-capitalize">Guns N' Roses</h3>
+                <h6>appetite for destruction</h6>
+
+              </div>
+              <div class=" card text-center">
+                <div class="card-img">
+                  <a href="#">
+                    <div class="layover">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <img src="img/drones.jpg" class="card-img_1" alt="">
+                  </a>
+                </div>
+                <h3 class="text-capitalize">Muse</h3>
+                <h6>Drones</h6>
+
+              </div>
+              <div class=" card text-center">
+                <div class="card-img">
+                  <a href="#">
+                    <div class="layover">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <img src="img/subsonica.jpg" class="card-img_1" alt="">
+                  </a>
+                </div>
+                <h3 class="text-capitalize">Subsonica</h3>
+                <h6>Microchip Emozionale</h6>
+
+                </div>
+              <div class=" card text-center">
+                <div class="card-img">
+                  <a href="#">
+                    <div class="layover">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <img src="img/coez.jpg" class="card-img_1" alt="">
+                  </a>
+                </div>
+                <h3 class="text-capitalize">Coez</h3>
+                <h6>Non erano fiori</h6>
+
+              </div>
 
             </div>
-            <div class=" card text-center">
-              <div class="card-img">
-                <a href="#">
-                  <div class="layover rounded">
-                    <i class="fas fa-play"></i>
-                  </div>
-                  <img src="img/youg.jpeg" class="card-img_1 rounded" alt="">
-                </a>
-              </div>
-              <h3 class="text-capitalize">Lana del Rey</h3>
-              <h6></h6>
-
-            </div>
-
           </div>
-        </div>
+          <div class="main-page_row ">
+            <h2>Create for Andrea Fazio</h2>
+            <h6 class="margin-bottom">Most listened, new suggestion</h6>
+            <div class="many-card margin-bottom scroll">
+              <div class=" card text-center">
+                <div class="card-img">
+                  <a href="#">
+                    <div class="layover">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <img src="img/radar.jpeg" class="card-img_1" alt="">
+                  </a>
+                </div>
+                <h3 class="text-capitalize">Release Radar</h3>
+                <h6></h6>
 
+                </div>
+              <div class=" card text-center">
+                <div class="card-img">
+                  <a href="#">
+                    <div class="layover">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <img src="img/mixdaily.jpeg" class="card-img_1" alt="">
+                  </a>
+                </div>
+                <h3 class="text-capitalize">Daily Mix 1</h3>
+                <h6></h6>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="main-page_row recently-played">
+            <h2>New Artist</h2>
+            <h6 class="margin-bottom">We think that these artists interest you</h6>
+            <div class="many-card margin-bottom scroll">
+              <div class=" card text-center">
+                <div class="card-img rounded">
+                  <a href="#" >
+                    <div class="layover rounded">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <img src="img/einaudi.jpeg" class="rounded card-img_1" alt="">
+                  </a>
+                </div>
+                <h3 class="text-capitalize">Einaudi</h3>
+                <h6 class="margin-bottom"></h6>
+
+              </div>
+              <div class=" card text-center">
+                <div class="card-img">
+                  <a href="#">
+                    <div class="layover rounded">
+                      <i class="fas fa-play"></i>
+                    </div>
+                    <img src="img/youg.jpeg" class="card-img_1 rounded" alt="">
+                  </a>
+                </div>
+                <h3 class="text-capitalize">Lana del Rey</h3>
+                <h6></h6>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
       </div>
-     </div>
+    </div>
+    <div class="player">
+      <div class="track">
+        <div class="track_info">
+          <img src="img/linkinpark.jpg" alt="">
+          <div class="title">
+            <span>Linkin Park</span>
+            <a href="#">
+
+              <span>Numb</span>
+            </a>
+          </div>
+        </div>
+          <div class="track-share">
+            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#"><i class="far fa-folder"></i></a>
+          </div>
+      </div>
+      <div class="mediastation">
+        <div class="mediastation-control">
+          <a href="#"><i class="fas fa-random"></i></a>
+          <a href="#"><i class="fas fa-step-backward"></i></a>
+          <a href="#"  @click="booleanPlay" class="onclicl">
+            <i v-if="buttonPlay" class="fas fa-pause"></i>
+            <i v-else  class="fas fa-play"></i>
+          </a>
+          <a href="#"><i class="fas fa-step-forward"></i></a>
+          <a href="#"><i class="fas fa-undo"></i></a>
+        </div>
+        <div id="line-progresbar">
+          <span>0:25</span>
+          <a href="#" class="progresbar">
+            <div class="progresbar-complete">
+              <div class="round">
+
+              </div>
+            </div>
+          </a>
+          <span>4:35</span>
+        </div>
+      </div>
+      <div class="option">
+        <div class="icon-list">
+          <a href="#"><i class="fas fa-list"></i></a>
+          <a href="#"><i class="fas fa-desktop"></i></a>
+
+        </div>
+        <div id="line-progresbar">
+          <a href="#"><i class="fas fa-volume-up"></i></a>
+          <a href="#" class="progresbar">
+            <div class="progresbar-complete">
+              <div class="round">
+
+              </div>
+
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    </div>
    </div>
-   <div class="player">
-    <div class="track">
-       <div class="track_info">
-         <img src="img/linkinpark.jpg" alt="">
-         <div class="title">
-           <span>Linkin Park</span>
-           <a href="#">
 
-             <span>Numb</span>
-           </a>
-         </div>
-       </div>
-        <div class="track-share">
-          <a href="#"><i class="far fa-heart"></i></a>
-          <a href="#"><i class="far fa-folder"></i></a>
-        </div>
-     </div>
-    <div class="mediastation">
-      <div class="mediastation-control">
-        <a href="#"><i class="fas fa-random"></i></a>
-        <a href="#"><i class="fas fa-step-backward"></i></a>
-        <a href="#"><i class="fas fa-play"></i></a>
-        <a href="#"><i class="fas fa-step-forward"></i></a>
-        <a href="#"><i class="fas fa-undo"></i></a>
-      </div>
-      <div id="line-progresbar">
-        <span>0:25</span>
-        <a href="#" class="progresbar">
-          <div class="progresbar-complete">
-            <div class="round">
-
-            </div>
-          </div>
-        </a>
-        <span>4:35</span>
-      </div>
-    </div>
-    <div class="option">
-      <div class="icon-list">
-        <a href="#"><i class="fas fa-list"></i></a>
-        <a href="#"><i class="fas fa-desktop"></i></a>
-
-      </div>
-      <div id="line-progresbar">
-        <a href="#"><i class="fas fa-volume-up"></i></a>
-        <a href="#" class="progresbar">
-          <div class="progresbar-complete">
-            <div class="round">
-
-            </div>
-
-          </div>
-        </a>
-      </div>
-    </div>
-
-    </div>
-   </div>
   </body>
 </html>
