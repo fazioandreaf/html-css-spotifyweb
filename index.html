@@ -311,15 +311,15 @@
           <a href="#"><i class="fas fa-step-backward"></i></a>
           <a href="#"  @click="booleanPlay" class="onclicl">
             <i @click="stoptime()" v-if="buttonPlay" class="fas fa-pause"></i>
-            <i @click="{playtime(volume)}" v-else  class="fas fa-play"></i>
+            <i @click="playtime(), secondsToHms()" v-else  class="fas fa-play"></i>
           </a>
           <a href="#"><i class="fas fa-step-forward"></i></a>
           <a href="#"><i class="fas fa-undo"></i></a>
         </div>
         <div class="line-progresbar">
-          <span>{{volume}}</span>
+          <span>{{volume_text}}</span>
           <div>
-              <input type="range" id="prova" v-model="volume"name="vol" min="0" max="100">
+              <input type="range" id="prova" v-model.sync="volume"name="vol" min="0" max="100">
           </div>
           <span>4:35</span>
         </div>
