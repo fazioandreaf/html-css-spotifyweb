@@ -8,14 +8,17 @@ function init(){
           buttonPlay:false,
           buttonLikeIt:false,
           buttonMute:true,
-          volume:10,
-          volume_text:'10',
+          repeat:false,
+          random:false,
+          volume:0,
+          volume_text:'Inizio',
           counter:1,
-          timefinish:100,
-          volume_complete:100- this.volume ,
+          timefinish:200,
+          timefinish_text:'Fine',
         },
         mounted:function(){
-            this.volume=10 ;
+            this.secondsToHms();
+            this.secondsToHmss();
         },
         'methods':{
             booleanPlay:function(){
@@ -27,22 +30,40 @@ function init(){
             booleanMute:function(){
                 this.buttonMute=!this.buttonMute;
             },
+            booleanRepeat:function(){
+                this.repeat=!this.repeat;
+            },
+            booleanRandom:function(){
+                this.random=!this.random;
+            },
+
             playtime:function(){
                 console.log(this.volume);
-               
-                    tempo=setInterval(this.increment,1000);
-                    tempo_testo=setInterval(this.secondsToHms,1000);
-  
+                tempo=setInterval(this.increment,1000);
+                tempo_testo=setInterval(this.secondsToHms,1000);
             },
             increment:function(){
-            if((this.volume>=this.timefinish)?this.stoptime():this.volume++);
+                if(this.repeat && this.volume>=this.timefinish){
+                    this.volume=0
+                }else if(this.volume>=this.timefinish){
+                    this.stoptime();
+                    this.booleanPlay();
+                }else this.volume++;
+            
             },
             secondsToHms:function() {
                 let m = Math.floor(this.volume % 3600 / 60);
                 let s = Math.floor(this.volume % 3600 % 60);
-                let mDisplay = m > 0 ? (m == 1 ? "01:" : 'm') : "";
-                let sDisplay = s > 0 ? s +(s == 1 ? "" : "") : "";
+                let mDisplay = m > 0 ?  m+":" : "0:";
+                let sDisplay = s > 9 ? s  : "0"+s;
                 this.volume_text= mDisplay + sDisplay; 
+            },
+            secondsToHmss:function() {
+                let m = Math.floor(this.timefinish % 3600 / 60);
+                let s = Math.floor(this.timefinish % 3600 % 60);
+                let mDisplay = m > 0 ?  m+":" : "0:";
+                let sDisplay = s > 9 ? s  : "0"+s;
+                this.timefinish_text= mDisplay + sDisplay; 
             },
             stoptime:function(){
                 clearInterval(tempo);

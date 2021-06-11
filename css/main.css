@@ -388,7 +388,7 @@ opacity: 1;
   justify-content: space-evenly;
   width: 50%;
 }
-.mediastation-control a:hover{
+.mediastation-control a:hover, .mediastation-control a:focus{
   text-decoration: none;
 }
 .mediastation>.mediastation-control>* {
@@ -530,4 +530,7 @@ input[type="range"]::-moz-range-track {
   border-radius:30px;
   border:none;
     height: 100%;
+}
+.repeat, .random{
+  color: #adff2f;
 }
