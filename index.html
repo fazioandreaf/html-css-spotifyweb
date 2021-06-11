@@ -279,7 +279,6 @@
                 <h6></h6>
 
               </div>
-              <input type="range" id="vol" v-model="volume"name="vol" min="0" max="100">
             </div>
           </div>
 
@@ -311,21 +310,17 @@
           <a href="#"><i class="fas fa-random"></i></a>
           <a href="#"><i class="fas fa-step-backward"></i></a>
           <a href="#"  @click="booleanPlay" class="onclicl">
-            <i v-if="buttonPlay" class="fas fa-pause"></i>
-            <i v-else  class="fas fa-play"></i>
+            <i @click="stoptime()" v-if="buttonPlay" class="fas fa-pause"></i>
+            <i @click="{playtime(volume)}" v-else  class="fas fa-play"></i>
           </a>
           <a href="#"><i class="fas fa-step-forward"></i></a>
           <a href="#"><i class="fas fa-undo"></i></a>
         </div>
         <div class="line-progresbar">
-          <span>0:25</span>
-          <a href="#" class="progresbar">
-            <div class="progresbar-complete">
-              <div class="round">
-
-              </div>
-            </div>
-          </a>
+          <span>{{volume}}</span>
+          <div>
+              <input type="range" id="prova" v-model="volume"name="vol" min="0" max="100">
+          </div>
           <span>4:35</span>
         </div>
       </div>

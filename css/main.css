@@ -187,7 +187,7 @@ li .menu-li:focus, li .menu-li:hover {
   width: 40px;
   height: 2px;
 }
-.a-intestazione:hover, .a-intestazione:focus,  {
+.a-intestazione:hover, .a-intestazione:focus  {
   text-decoration: none;
   color: white;
 }
@@ -415,28 +415,31 @@ opacity: 1;
   display: flex;
   justify-content: space-evenly;
 }
-.icon-list{
-
-}
 .line-progresbar {
-  align-self: stretch;
   display: flex;
   justify-content: space-between;
 }
 .line-progresbar>*{
   align-self: center;
 }
-.line-progresbar>a:first-child{
-  margin-right: 1px;
+.line-progresbar>div{
+  flex: 1;
+  position: relative;
+  display: flex;
+  height: 5px;
+}
+.line-progresbar>div:hover .progresbar{
+  display: none;
+}
+.line-progresbar span{
+  flex-basis: 10%;
 }
 .option .progresbar {
   margin-right: 0;
 }
 .progresbar {
-  height: 25%;
-  flex-basis: 80%;
-  background-color: #5a5a5a;
-  border-radius: 2%;
+  flex:1 ;
+  background-color: white;
   align-self: center;
   height: 5px;
   border-radius: 5px;
@@ -453,11 +456,13 @@ opacity: 1;
   display: none;
 }
 .progresbar-complete {
-  width: 40%;
-  background-color: white;
+  position: absolute;
+  right: 0;
+  border-radius: 0 5px 5px  0 !important;
+
+  background-color: #5a5a5a;
   height: 100%;
   border-radius: 2px;
-  position: relative;
 }
 .progresbar:hover .progresbar-complete {
   background-color: #adff2f;
@@ -482,4 +487,47 @@ opacity: 1;
 }
 .mediastation-control .onclicl:active {
   font-size: 2rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  
+  -webkit-appearance: none;
+  appearance: none;
+  width: 9px;
+  height: 9px;
+  background: #4CAF50;
+  cursor: pointer;
+  border-radius:30px;
+  outline:none;
+}
+
+/* Moz */
+
+input[type="range"]::-moz-range-thumb {
+  width: 0px;
+  height: 0px;
+  background: #adff2f;
+  cursor: pointer;
+  border-radius:50%;
+  border:none;
+  outline:none;
+  transition: all 0.1s ease-in-out;
+}
+.line-progresbar:hover input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+}
+
+input[type="range"]::-moz-range-progress {
+
+  background-color: white;
+  height: 100%;
+  border-radius:30px;
+  border:none;
+}
+input[type="range"]::-moz-range-track {  
+  background-color: grey;
+  border-radius:30px;
+  border:none;
+    height: 100%;
 }

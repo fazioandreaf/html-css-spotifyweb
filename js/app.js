@@ -8,7 +8,12 @@ function init(){
           buttonPlay:false,
           buttonLikeIt:false,
           buttonMute:true,
-          volume:0,
+          volume:10,
+          timefinish:100,
+          volume_complete:100- this.volume ,
+        },
+        mounted:function(){
+            this.volume=10 ;
         },
         'methods':{
             booleanPlay:function(){
@@ -20,6 +25,15 @@ function init(){
             booleanMute:function(){
                 this.buttonMute=!this.buttonMute;
             },
+            playtime:function(time){
+                tempo=setInterval(function(){
+                    time=time +1;
+                    console.log(time);
+                },1000)
+            },
+            stoptime:function(){
+                clearInterval(tempo)
+            }
         }   
     })
 }
